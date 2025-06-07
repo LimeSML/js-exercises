@@ -1,13 +1,13 @@
-const proto = {
-    1: 'protp-1',
-    'a': 'proto-a',
+const prototype = {
+    1: 'protptype-1',
+    'a': 'prototype-a',
 };
-Object.defineProperty(proto, 'enumerable', {
+Object.defineProperty(prototype, 'enumerable', {
     value: 'true',
     enumerable: true,
 });
 
-const obj = Object.create(proto);
+const obj = Object.create(prototype);
 obj[1] = 'own-1';
 obj[2] = 'own-2';
 obj['a'] = 'own-a';

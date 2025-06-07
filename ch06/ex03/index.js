@@ -24,13 +24,19 @@ console.log(Object.prototype.isPrototypeOf(date)); // true
 console.log(Object.prototype.isPrototypeOf(map));  // true
 
 // Array
-console.log(Array.prototype.isPrototypeOf(arr));   // true
 console.log(Array.prototype.isPrototypeOf(obj));   // false
+console.log(Array.prototype.isPrototypeOf(arr));   // true
+console.log(Array.prototype.isPrototypeOf(date));  // false
+console.log(Array.prototype.isPrototypeOf(map));   // false
 
 // Date
-console.log(Date.prototype.isPrototypeOf(date));   // true
 console.log(Date.prototype.isPrototypeOf(obj));    // false
+console.log(Date.prototype.isPrototypeOf(arr));    // false
+console.log(Date.prototype.isPrototypeOf(date));   // true
+console.log(Date.prototype.isPrototypeOf(map));    // false
 
 // Map
+console.log(Map.prototype.isPrototypeOf(obj));     // false 
+console.log(Map.prototype.isPrototypeOf(arr));     // false
+console.log(Map.prototype.isPrototypeOf(date));    // false
 console.log(Map.prototype.isPrototypeOf(map));     // true
-console.log(Map.prototype.isPrototypeOf(obj));     // false
