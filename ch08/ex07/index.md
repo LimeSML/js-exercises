@@ -1,0 +1,1 @@
+https://www.ricoh.co.jp/-/Media/Ricoh/Common/cmn_g_header_footer/js/init.jsKv
