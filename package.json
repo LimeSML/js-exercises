@@ -30,6 +30,7 @@
     "webpack-cli": "^6.0.1"
   },
   "dependencies": {
+    "fs": "^0.0.1-security",
     "tsx": "^4.20.3"
   }
 }
