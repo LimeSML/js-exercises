@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-export function instanceOf(object: any, constructor: any): boolean {
+export function instanceOf(object: object, constructor: any): boolean {
     if (typeof object !== 'object' || object === null) {
         throw new Error('object must be a non-null object');
     }
