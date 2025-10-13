@@ -1,0 +1,4 @@
+{
+  "name": "<button onclick=\"window.alert('XSS')\">ここをクリック！</button>",
+  "age": 50
+}
