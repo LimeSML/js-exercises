@@ -1,1 +1,42 @@
-(()=>{var t={724:(t,r)=>{const e=(t,r)=>t+r,n=t=>t*t;r.mean=t=>t.reduce(e)/t.length,r.stddev=function(t){let a=r.mean(t);return Math.sqrt(t.map(t=>t-a).map(n).reduce(e)/(t.length-1))}},800:(t,r)=>{class e{has(t){throw new Error("Abstract method")}}Symbol.iterator;Symbol.iterator,AbstractWritableSet,Symbol.iterator,r.q.bits=new Uint8Array([1,2,4,8,16,32,64,128]),r.q.masks=new Uint8Array([-2,-3,-5,-9,-17,-33,-65,-129])}},r={};function e(n){var a=r[n];if(void 0!==a)return a.exports;var s=r[n]={exports:{}};return t[n](s,s.exports,e),s.exports}const n=e(724);let a=new(0,e(800).q)(100);a.insert(10),a.insert(20),a.insert(30),n.mean([...a])})();
+(() => {
+  var t = {
+      724: (t, r) => {
+        const e = (t, r) => t + r,
+          n = (t) => t * t;
+        (r.mean = (t) => t.reduce(e) / t.length),
+          (r.stddev = function (t) {
+            let a = r.mean(t);
+            return Math.sqrt(
+              t
+                .map((t) => t - a)
+                .map(n)
+                .reduce(e) /
+                (t.length - 1),
+            );
+          });
+      },
+      800: (t, r) => {
+        class e {
+          has(t) {
+            throw new Error("Abstract method");
+          }
+        }
+        Symbol.iterator;
+        Symbol.iterator,
+          AbstractWritableSet,
+          Symbol.iterator,
+          (r.q.bits = new Uint8Array([1, 2, 4, 8, 16, 32, 64, 128])),
+          (r.q.masks = new Uint8Array([-2, -3, -5, -9, -17, -33, -65, -129]));
+      },
+    },
+    r = {};
+  function e(n) {
+    var a = r[n];
+    if (void 0 !== a) return a.exports;
+    var s = (r[n] = { exports: {} });
+    return t[n](s, s.exports, e), s.exports;
+  }
+  const n = e(724);
+  let a = new (0, e(800).q)(100);
+  a.insert(10), a.insert(20), a.insert(30), n.mean([...a]);
+})();

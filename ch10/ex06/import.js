@@ -1,14 +1,14 @@
-console.log('--- Start ---');
+console.log("--- Start ---");
 
-console.log('Before first import');
-import './export.js';
+console.log("Before first import");
+import "./export.js";
 
-console.log('Between imports');
-import './export.js';
+console.log("Between imports");
+import "./export.js";
 
-console.log('After second import');
+console.log("After second import");
 
-console.log('--- End ---');
+console.log("--- End ---");
 
 // imported!
 // --- Start ---

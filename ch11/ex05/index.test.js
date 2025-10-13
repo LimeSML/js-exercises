@@ -52,5 +52,5 @@ test.each(testdata)(
   "detectFileType(...) === $expected",
   ({ data, expected }) => {
     expect(detectFileType(data.buffer)).toStrictEqual(expected);
-  }
+  },
 );

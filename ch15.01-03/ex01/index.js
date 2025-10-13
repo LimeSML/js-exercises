@@ -28,7 +28,7 @@ form.addEventListener("submit", (e) => {
   toggle.type = "checkbox";
   toggle.addEventListener("change", (e) => {
     label.style.textDecorationLine = e.target.checked ? "line-through" : "none";
-  })
+  });
 
   const destroy = document.createElement("button");
   // TODO: destroy がクリック (click) された場合に elem を削除しなさい
@@ -43,7 +43,7 @@ form.addEventListener("submit", (e) => {
     if (listToDestroy != null) {
       listToDestroy.remove();
     }
-  })
+  });
 
   // TODO: elem 内に toggle, label, destroy を追加しなさい
   div.append(toggle, label, destroy);

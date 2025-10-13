@@ -4,7 +4,7 @@
  * @return {Promise}  Promise - 指定時間後に解決される Promise
  */
 function wait(msec) {
-    return new Promise((resolve) => setTimeout(resolve, msec));
+  return new Promise((resolve) => setTimeout(resolve, msec));
 }
 
 // function g1() {
@@ -21,12 +21,12 @@ function wait(msec) {
 // }
 
 function g1() {
-    return wait(1000)
-        .then(() => console.log("A"))
-        .then(() => wait(2000))
-        .then(() => console.log("B"))
-        .then(() => wait(3000))
-        .then(() => console.log("C"));
+  return wait(1000)
+    .then(() => console.log("A"))
+    .then(() => wait(2000))
+    .then(() => console.log("B"))
+    .then(() => wait(3000))
+    .then(() => console.log("C"));
 }
 
 // function g2() {
@@ -43,12 +43,12 @@ function g1() {
 // }
 
 function g2() {
-    return wait(1000)
-        .then(() => console.log("A"))
-        .then(() => wait(2000))
-        .then(() => console.log("B"))
-        .then(() => wait(3000))
-        .then(() => console.log("C"));
+  return wait(1000)
+    .then(() => console.log("A"))
+    .then(() => wait(2000))
+    .then(() => console.log("B"))
+    .then(() => wait(3000))
+    .then(() => console.log("C"));
 }
 
 // function g3() {
@@ -76,24 +76,22 @@ function g2() {
 // }
 
 function g3() {
-    // 以下2つの関数が存在するとします (中身は適当)
-    function fetchUser() {
-        return Promise.resolve({ id: 42, name: "John" });
-    }
-    function fetchUserFriends(user) {
-        return Promise.resolve([
-            { name: "Sam", id: 100 },
-            { name: "Bob", id: 1 },
-        ]);
-    }
+  // 以下2つの関数が存在するとします (中身は適当)
+  function fetchUser() {
+    return Promise.resolve({ id: 42, name: "John" });
+  }
+  function fetchUserFriends(user) {
+    return Promise.resolve([
+      { name: "Sam", id: 100 },
+      { name: "Bob", id: 1 },
+    ]);
+  }
 
-    return fetchUser()
-        .then((user) => {
-            return fetchUserFriends(user)
-                .then((friends) => {
-                    console.log(`${user.name} has ${friends.length} friends!`);
-                });
-        });
+  return fetchUser().then((user) => {
+    return fetchUserFriends(user).then((friends) => {
+      console.log(`${user.name} has ${friends.length} friends!`);
+    });
+  });
 }
 
 // function g4() {
@@ -111,9 +109,9 @@ function g3() {
 // }
 
 function g4() {
-    function someFunction() {
-        return 42;
-    }
+  function someFunction() {
+    return 42;
+  }
 
-    return Promise.resolve(someFunction());
+  return Promise.resolve(someFunction());
 }

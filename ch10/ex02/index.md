@@ -1,2 +1,2 @@
-* AMD
-* UMD
+- AMD
+- UMD

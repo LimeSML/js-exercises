@@ -10,7 +10,7 @@ console.log(`typeof null -> ${typeof null}`);
 console.log(`typeof { a: 1 } -> ${typeof { a: 1 }}`);
 console.log(`typeof NaN -> ${typeof NaN}`);
 console.log(`typeof 1 -> ${typeof 1}`);
-function f() {};
+function f() {}
 console.log(`typeof f -> ${typeof f}`);
 
 // typeof undefined -> undefined

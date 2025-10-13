@@ -1,3 +1,4 @@
-# $ や _ を変数名として利用するライブラリ
-* Socket.io
-* decimal.js
+# $ や \_ を変数名として利用するライブラリ
+
+- Socket.io
+- decimal.js

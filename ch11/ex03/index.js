@@ -1,26 +1,26 @@
 export function littleToBigEndian(uint32Arr) {
-    if (!(uint32Arr instanceof Uint32Array)) {
-        throw new Error('input must be a Uint32Array');
-    }
+  if (!(uint32Arr instanceof Uint32Array)) {
+    throw new Error("input must be a Uint32Array");
+  }
 
-    const result = new Uint32Array(uint32Arr.length);
-    for (let i = 0; i < uint32Arr.length; i++) {
-        const value = uint32Arr[i];
-        // 4バイトの順序を逆転
-        result[i] =
-            ((value & 0x000000FF) << 24) | // 1バイト目 → 最上位
-            ((value & 0x0000FF00) << 8)  | // 2バイト目 → 2番目
-            ((value & 0x00FF0000) >>> 8) | // 3バイト目 → 3番目
-            ((value & 0xFF000000) >>> 24); // 4バイト目 → 最下位
-    }
-    return result;
+  const result = new Uint32Array(uint32Arr.length);
+  for (let i = 0; i < uint32Arr.length; i++) {
+    const value = uint32Arr[i];
+    // 4バイトの順序を逆転
+    result[i] =
+      ((value & 0x000000ff) << 24) | // 1バイト目 → 最上位
+      ((value & 0x0000ff00) << 8) | // 2バイト目 → 2番目
+      ((value & 0x00ff0000) >>> 8) | // 3バイト目 → 3番目
+      ((value & 0xff000000) >>> 24); // 4バイト目 → 最下位
+  }
+  return result;
 }
 
 export function bigToLittleEndian(uint32Arr) {
-    return littleToBigEndian(uint32Arr);
+  return littleToBigEndian(uint32Arr);
 }
 
-const littleEndianData = new Uint32Array([0x11223344, 0xAABBCCDD]);
+const littleEndianData = new Uint32Array([0x11223344, 0xaabbccdd]);
 
 const bigEndianData = littleToBigEndian(littleEndianData);
 console.log(bigEndianData[0].toString(16)); // 44332211

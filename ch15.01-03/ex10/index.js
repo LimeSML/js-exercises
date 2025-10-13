@@ -1,25 +1,27 @@
-const editorFront = document.querySelector('#editor-front');
-const editorBack = document.querySelector('#editor-back');
+const editorFront = document.querySelector("#editor-front");
+const editorBack = document.querySelector("#editor-back");
 
-if (editorFront && editorBack &&
+if (
+  editorFront &&
+  editorBack &&
   editorFront instanceof HTMLDivElement &&
-  editorBack instanceof HTMLInputElement) {
+  editorBack instanceof HTMLInputElement
+) {
+  editorFront.style.backgroundColor = "rgb(255, 255, 255)";
 
-  editorFront.style.backgroundColor = 'rgb(255, 255, 255)';
-
-  editorFront.addEventListener('click', () => {
+  editorFront.addEventListener("click", () => {
     editorBack.focus();
   });
 
-  editorBack.addEventListener('focus', () => {
-    editorFront.style.backgroundColor = 'rgb(192, 192, 192)';
+  editorBack.addEventListener("focus", () => {
+    editorFront.style.backgroundColor = "rgb(192, 192, 192)";
   });
 
-  editorBack.addEventListener('blur', () => {
-    editorFront.style.backgroundColor = 'rgb(255, 255, 255)';
+  editorBack.addEventListener("blur", () => {
+    editorFront.style.backgroundColor = "rgb(255, 255, 255)";
   });
 
-  editorBack.addEventListener('input', (e) => {
+  editorBack.addEventListener("input", (e) => {
     editorFront.textContent = e.target.value;
-  })
+  });
 }

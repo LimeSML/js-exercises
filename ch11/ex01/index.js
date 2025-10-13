@@ -1,27 +1,27 @@
 export class TypeMap {
-    #map;
+  #map;
 
-    constructor() {
-        this.#map = new Map();
+  constructor() {
+    this.#map = new Map();
+  }
+
+  set(key, value) {
+    if (typeof key !== "function") {
+      throw new Error("key must be a function");
+    }
+    if (value.constructor !== key) {
+      throw new Error("value must be an instance of key");
     }
 
-    set(key, value) {
-        if (typeof key !== 'function') {
-            throw new Error('key must be a function')
-        }
-        if (value.constructor !== key) {
-            throw new Error('value must be an instance of key')
-        }
+    this.#map.set(key, value);
+  }
 
-        this.#map.set(key, value);
+  get(key) {
+    if (typeof key !== "function") {
+      throw new Error("key must be a function");
     }
-
-    get(key) {
-        if (typeof key !== 'function') {
-            throw new Error('key must be a function')
-        }
-        return this.#map.get(key);
-    }
+    return this.#map.get(key);
+  }
 }
 
 class Foo {}

@@ -9,17 +9,17 @@
 // }
 
 export function fibonacciIterator() {
-    let x = 0;
-    let y = 1;
+  let x = 0;
+  let y = 1;
 
-    return {
-        [Symbol.iterator]() {
-            return this;
-        },
-        next() {
-            const value = x;
-            [x, y] = [y, x + y];
-            return { value, done: false };
-        },
-    };
+  return {
+    [Symbol.iterator]() {
+      return this;
+    },
+    next() {
+      const value = x;
+      [x, y] = [y, x + y];
+      return { value, done: false };
+    },
+  };
 }

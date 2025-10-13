@@ -1,5 +1,5 @@
-const stats = require('./stats.cjs');
-const BitSet = require('./sets.cjs').BitSet;
+const stats = require("./stats.cjs");
+const BitSet = require("./sets.cjs").BitSet;
 
 let s = new BitSet(100);
 s.insert(10);

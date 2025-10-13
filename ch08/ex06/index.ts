@@ -13,7 +13,7 @@
 
 const args: any[] = [];
 function call(...argments: any[]) {
-    args.push(argments);
+  args.push(argments);
 }
 
 call(1, 2, 3);

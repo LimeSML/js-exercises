@@ -1,0 +1,9 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // フォーマッターをPrettierにする
+  "editor.formatOnSave": true, // ファイル保存時にフォーマットを実行
+  "[markdown]": {
+    // markdownのフォーマットを無効化
+    "editor.formatOnSave": false
+  },
+  "editor.tabSize": 2
+}

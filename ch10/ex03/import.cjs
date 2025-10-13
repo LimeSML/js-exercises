@@ -1,4 +1,4 @@
-const { add, Calculator } = require('./export.cjs');
+const { add, Calculator } = require("./export.cjs");
 
 console.log("2 + 3 =", add(2, 3));
 

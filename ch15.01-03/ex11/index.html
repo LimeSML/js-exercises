@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -12,7 +12,7 @@
         () => {
           console.log("div");
         },
-        { capture: false }
+        { capture: false },
       );
       btn.addEventListener("click", () => {
         console.log("button");
@@ -34,7 +34,7 @@
       const randomEventTarget = new RandomEventTarget();
 
       // 1. htmlのpタグ要素を生成しなさい。また、ボタン要素の直後の位置にpタグ要素を配置しなさい。
-      const p = document.createElement('p');
+      const p = document.createElement("p");
       btn.after(p);
 
       randomEventTarget.addEventListener("random", (e) => {
@@ -43,7 +43,7 @@
       });
 
       // 3. ボタンにイベントリスナを追加し、ボタン押下するごとに乱数値を変更しなさい。変更にはRandomEventTargetのtriggerメソッドを利用しなさい。
-      btn.addEventListener('click', () => {
+      btn.addEventListener("click", () => {
         randomEventTarget.trigger();
       });
 

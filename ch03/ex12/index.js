@@ -1,11 +1,11 @@
 class Example {
-    valueOf() {
-        return  0;
-    }
+  valueOf() {
+    return 0;
+  }
 
-    toString() {
-        return "Example";
-    }
+  toString() {
+    return "Example";
+  }
 }
 
 let obj = new Example();

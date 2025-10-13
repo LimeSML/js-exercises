@@ -21,23 +21,23 @@ describe("math", () => {
   // 以下に sum, factorial のテストを記載せよ
   describe("sum", () => {
     it("returns the sum of an array", () => {
-        expect(sum([1, 2, 3, -4])).toBe(2);
+      expect(sum([1, 2, 3, -4])).toBe(2);
     });
 
     it("returns zero value when empty array given", () => {
-        expect(sum([])).toBe(0);
+      expect(sum([])).toBe(0);
     });
   });
 
   describe("factorial", () => {
     it("returns the factorial of a number", () => {
-        expect(factorial(5)).toBe(120);
+      expect(factorial(5)).toBe(120);
     });
     it("returns one value when zero given", () => {
-        expect(factorial(0)).toBe(1);
+      expect(factorial(0)).toBe(1);
     });
     it("returns one value when one given", () => {
-        expect(factorial(1)).toBe(1);
+      expect(factorial(1)).toBe(1);
     });
-  })
+  });
 });
