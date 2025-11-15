@@ -1,0 +1,186 @@
+.completed {
+  text-decoration: line-through;
+}
+
+/* 背景に炭治郎の羽織の市松模様を配置する */
+body {
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", sans-serif;
+  color: #f5f5f5;
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #0d0d0d;
+  background-image: linear-gradient(45deg, #0d0d0d 25%, transparent 25%),
+    linear-gradient(-45deg, #0d0d0d 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #0d0d0d 75%),
+    linear-gradient(-45deg, transparent 75%, #0d0d0d 75%);
+  background-size: 80px 80px;
+  background-position:
+    0 0,
+    0 40px,
+    40px -40px,
+    -40px 0px;
+  background-color: #0f3d33;
+}
+
+/* 入力フォームを中央配置し、半透明な背景を持たせる */
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(173, 216, 230, 0.5);
+  backdrop-filter: blur(6px);
+}
+
+/* 新しいタスク入力欄に丸みをつける*/
+input#new-todo {
+  flex: 1;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #222;
+}
+
+/* 追加ボタンは水から炎へ変化するグラデーション */
+button {
+  background: linear-gradient(135deg, #0066cc, #33ccff);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* ボタンをホバーしたとき、炎の呼吸のように赤橙に変化 */
+button:hover {
+  background: linear-gradient(135deg, #ff4500, #ffb347);
+  transform: scale(1.05);
+}
+
+/* ToDoリスト全体を中央に整列 */
+#todo-list {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  max-width: 520px;
+  margin: 0;
+}
+
+/* 各ToDoに暗い影を付与して立体感を出す */
+#todo-list li {
+  background: rgba(0, 0, 0, 0.65);
+  color: #f5f5f5;
+  margin-bottom: 12px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-left: 6px solid transparent;
+  transition:
+    border-color 0.3s ease,
+    transform 0.2s ease;
+}
+
+/* Todoの左線を各呼吸の色に順番で変える */
+#todo-list li:nth-child(10n + 1) {
+  border-color: #4ea5d9;
+} /* 水の呼吸 */
+#todo-list li:nth-child(10n + 2) {
+  border-color: #ff4500;
+} /* 炎の呼吸 */
+#todo-list li:nth-child(10n + 3) {
+  border-color: #f6e05e;
+} /* 雷の呼吸 */
+#todo-list li:nth-child(10n + 4) {
+  border-color: #90ee90;
+} /* 風の呼吸 */
+#todo-list li:nth-child(10n + 5) {
+  border-color: #ff69b4;
+} /* 音の呼吸 */
+#todo-list li:nth-child(10n + 6) {
+  border-color: #8a2be2;
+} /* 蛇の呼吸 */
+#todo-list li:nth-child(10n + 7) {
+  border-color: #ffb6c1;
+} /* 恋の呼吸 */
+#todo-list li:nth-child(10n + 8) {
+  border-color: #dcdcdc;
+} /* 霞の呼吸 */
+#todo-list li:nth-child(10n + 9) {
+  border-color: #deb887;
+} /* 岩の呼吸 */
+#todo-list li:nth-child(10n + 10) {
+  border-color: #a4c639;
+} /* 蟲の呼吸 */
+
+/* Todo1件分の内容部分を横並びに配置 */
+.view {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* ラベル部分をクリック可能にする */
+label.content {
+  flex: 1;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* チェックボックスをやや大きくして青系アクセントをつける */
+input.toggle {
+  transform: scale(1.4);
+  accent-color: #00bfff;
+}
+
+/* 完了済みTodoに横線を引き、縮小させる */
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+  transform: scale(0.98);
+}
+
+/* 削除ボタンを赤で強調 */
+button.destroy {
+  background: none;
+  color: #ff6666;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+/* 削除ボタンをホバーしたとき、色を変え、拡大と回転をさせる */
+button.destroy:hover {
+  color: #ff0000;
+  transform: scale(1.2) rotate(5deg);
+}
+
+/* Todoをホバーしたとき、少し浮かせるアニメーションをつける */
+#todo-list li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.25);
+}
+
+/* スクロールバー全体を細くする */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* スクロールバーのつまみを水・炎・雷の流れのように表現 */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #003366, #ff4500, #f6e05e);
+  border-radius: 5px;
+}
