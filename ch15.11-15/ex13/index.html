@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <title>チャットアプリ</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <script type="module" src="./index.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+      }
+      #message-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 16px;
+        overflow-y: auto;
+      }
+      .message {
+        max-width: 70%;
+        padding: 12px 16px;
+        border-radius: 16px;
+        word-break: break-word;
+      }
+      .message.other {
+        background-color: #e1ffc7;
+        align-self: flex-start;
+      }
+      .message.my {
+        background-color: #d1e7ff;
+        align-self: flex-end;
+      }
+      .message-input {
+        position: sticky;
+        bottom: 0;
+        padding: 16px;
+        display: flex;
+        gap: 8px;
+        align-items: stretch;
+        background: #fff;
+        box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+      }
+      #message-textarea {
+        flex: 1;
+        resize: none;
+        font-size: 16px;
+        padding: 16px;
+        border-radius: 6px;
+        border: 1px solid #ddd;
+        height: 72px;
+        line-height: 1.5;
+        box-sizing: border-box;
+      }
+      #message-textarea:disabled {
+        background-color: #f5f5f5;
+        cursor: not-allowed;
+      }
+      #send-button {
+        font-size: 16px;
+        color: #fff;
+        background-color: #007bfe;
+        border: none;
+        padding: 0 24px;
+        border-radius: 6px;
+        cursor: pointer;
+        height: 72px;
+        flex-shrink: 0;
+      }
+      #send-button:hover {
+        background-color: #0069e6;
+      }
+      #send-button:active {
+        background-color: #005fcc;
+        transform: scale(0.97);
+      }
+      #send-button:disabled {
+        background-color: #a0cfff;
+        cursor: not-allowed;
+        opacity: 0.6;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="message-container"></div>
+    <div class="message-input">
+      <textarea
+        id="message-textarea"
+        placeholder="メッセージを入力..."
+      ></textarea>
+      <button id="send-button">送信</button>
+    </div>
+  </body>
+</html>
